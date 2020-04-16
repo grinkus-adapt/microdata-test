@@ -3,27 +3,42 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>hello</title>
-    <meta property="og:title" content="Facebook T-Shirt">
-    <meta property="og:description" content="Unisex Facebook T-shirt, Small">
-    <meta property="og:url" content="https://example.org/facebook">
-    <meta property="og:image" content="https://example.org/facebook.jpg">
-    <meta property="product:brand" content="Facebook">
+
+    <meta property="og:title" content="Product 1 T-Shirt">
+    <meta property="og:description" content="Unisex Product 1 T-shirt, Small">
+    <meta property="og:url" content="https://example.org/Product 1">
+    <meta property="og:image" content="https://example.org/Product 1.jpg">
+    <meta property="product:brand" content="Product 1">
     <meta property="product:availability" content="in stock">
     <meta property="product:condition" content="new">
     <meta property="product:price:amount" content="7.99">
     <meta property="product:price:currency" content="USD">
-    <meta property="product:retailer_item_id" content="facebook_tshirt_001">
+    <meta property="product:retailer_item_id" content="Product 1_tshirt_001">
     <meta property="product:item_group_id" content="fb_tshirts">
+
+    <meta property="og:title" content="Product 2 T-Shirt">
+    <meta property="og:description" content="Unisex Product 2 T-shirt, Small">
+    <meta property="og:url" content="https://example.org/Product 2">
+    <meta property="og:image" content="https://example.org/Product 2.jpg">
+    <meta property="product:brand" content="Product 2">
+    <meta property="product:availability" content="in stock">
+    <meta property="product:condition" content="new">
+    <meta property="product:price:amount" content="17.99">
+    <meta property="product:price:currency" content="USD">
+    <meta property="product:retailer_item_id" content="Product 2_tshirt_001">
+    <meta property="product:item_group_id" content="fb_tshirts">
+
   </head>
   <body>
     <p>Hi</p>
+
     <div itemscope itemtype="http://schema.org/Product">
-      <meta itemprop="brand" content="facebook">
-      <meta itemprop="name" content="Facebook T-Shirt">
-      <meta itemprop="description" content="Unisex Facebook T-shirt, Small">
-      <meta itemprop="productID" content="facebook_tshirt_001">
-      <meta itemprop="url" content="https://example.org/facebook">
-      <meta itemprop="image" content="https://example.org/facebook.jpg">
+      <meta itemprop="brand" content="Product 1">
+      <meta itemprop="name" content="Product 1 T-Shirt">
+      <meta itemprop="description" content="Unisex Product 1 T-shirt, Small">
+      <meta itemprop="productID" content="Product 1_tshirt_001">
+      <meta itemprop="url" content="https://example.org/Product 1">
+      <meta itemprop="image" content="https://example.org/Product 1.jpg">
       <div itemprop="value" itemscope itemtype="http://schema.org/PropertyValue">
         <span itemprop="name">item_group_id</span>
         <meta itemprop="value" content="True">fb_tshirts</meta>
@@ -35,16 +50,17 @@
         <meta itemprop="priceCurrency" content="USD">
       </div>
     </div>
+
     <script type="application/ld+json">
     {
       "@context":"https://schema.org",
       "@type":"Product",
-      "productID":"facebook_tshirt_001",
-      "name":"Facebook T-Shirt",
-      "description":"Unisex Facebook T-shirt, Small",
-      "url":"https://example.org/facebook",
-      "image":"https://example.org/facebook.jpg",
-      "brand":"facebook",
+      "productID":"Product 1_tshirt_001",
+      "name":"Product 1 T-Shirt",
+      "description":"Unisex Product 1 T-shirt, Small",
+      "url":"https://example.org/Product 1",
+      "image":"https://example.org/Product 1.jpg",
+      "brand":"Product 1",
       "offers": [
         {
           "@type": "Offer",
@@ -61,5 +77,52 @@
       }]
     }
     </script>
+
+    <div itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="brand" content="Product 2">
+      <meta itemprop="name" content="Product 2 T-Shirt">
+      <meta itemprop="description" content="Unisex Product 2 T-shirt, Small">
+      <meta itemprop="productID" content="Product 2_tshirt_001">
+      <meta itemprop="url" content="https://example.org/Product 2">
+      <meta itemprop="image" content="https://example.org/Product 2.jpg">
+      <div itemprop="value" itemscope itemtype="http://schema.org/PropertyValue">
+        <span itemprop="name">item_group_id</span>
+        <meta itemprop="value" content="True">fb_tshirts</meta>
+      </div>
+      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <link itemprop="availability" href="http://schema.org/InStock">
+        <link itemprop="itemCondition" href="http://schema.org/NewCondition">
+        <meta itemprop="price" content="17.99">
+        <meta itemprop="priceCurrency" content="USD">
+      </div>
+    </div>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Product",
+      "productID":"Product 2_tshirt_001",
+      "name":"Product 2 T-Shirt",
+      "description":"Unisex Product 2 T-shirt, Small",
+      "url":"https://example.org/Product 2",
+      "image":"https://example.org/Product 2.jpg",
+      "brand":"Product 2",
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "17.99",
+          "priceCurrency": "USD",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "additionalProperty": [{
+        "@type": "PropertyValue",
+        "propertyID": "item_group_id",
+        "value": "fb_tshirts"
+      }]
+    }
+    </script>
+
   </body>
 </html>
